@@ -3,6 +3,8 @@ package manager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.TreeMap;
 
@@ -19,6 +21,9 @@ public class HelperBase {
     public void clickBase(By locator){
         WebElement element = findElementBase(locator);
         element.click();
+    }
+    public void clickBaseWait(By locator, int time){
+        new WebDriverWait(driver, time).until(ExpectedConditions.elementToBeClickable(locator));
     }
 
     public void typeBase(By locator, String text){

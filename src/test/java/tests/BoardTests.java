@@ -2,6 +2,7 @@ package tests;
 
 import manager.RandomData;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -21,8 +22,10 @@ public class BoardTests extends TestBase{
 
     @Test
     public void createNewBoardNegativeTest(){
-        app.getHelperBoard().createNewBoard("");
-        Assert.assertTrue(app.getHelperBoard().isAttributeDisabled());
+        app.getHelperBoard().createNewBoard("sdsdds");
+        //Assert.assertTrue(app.getHelperBoard().isAttributeDisabled());
+        Assert.assertTrue(app.getHelperBoard().isElementPresent_textBoardTitleRequired());
+        System.out.println("====================================================");
     }
 
     @Test
@@ -31,8 +34,17 @@ public class BoardTests extends TestBase{
         app.getHelperBoard().createNewBoard("DEL-"+boardTitle);
         if(app.getHelperBoard().isTextInElementEquals_boardTitle("DEL-"+boardTitle)){
             app.getHelperBoard().deleteBoard("DEL-"+boardTitle);
-        }else
+            Assert.assertTrue(app.getHelperBoard().isTextInElementPresent_BoardDeleted());
+        }else{
             System.out.println("board didn't create");
+            Assert.fail("board didn't create");
+        }
     }
+
+//    @AfterMethod
+//    public void afterTest(){
+//        if(app.getHelperBoard().isAttributeDisabled())
+//            app.getHelperBoard().closeCreateBoardForm();
+//    }
 
 }
