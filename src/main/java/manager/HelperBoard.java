@@ -1,6 +1,8 @@
 package manager;
 
+import dto.BoardDTO;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -31,6 +33,13 @@ public class HelperBoard extends HelperBase {
         typeBase(inputBoardTitle, boardTitle);
         clickBase(btnCreateSubmit);
     }
+    public void createNewBoard(BoardDTO board) {
+        clickBase(btnCreateNewBoard);
+        pause(3);
+        typeBase(inputBoardTitle, board.getBoardTitle());
+        clickBase(btnCreateSubmit);
+
+    }
 
     public boolean isTextInElementEquals_boardTitle(String text) {
         pause(3);
@@ -47,6 +56,14 @@ public class HelperBoard extends HelperBase {
     }
 
     public void deleteBoard(String boardTitle) {
+        clickBase(btnDots);
+        pause(3);
+        clickBase(btnCloseBoard);
+        clickBase(btnCloseConfirm);
+        clickBase(btnDelete);
+        clickBase(btnDeleteConfirm);
+    }
+    public void deleteBoard() {
         clickBase(btnDots);
         pause(3);
         clickBase(btnCloseBoard);
