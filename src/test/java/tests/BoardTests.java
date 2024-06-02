@@ -3,14 +3,18 @@ package tests;
 import dto.BoardDTO;
 import manager.RandomData;
 import manager.TakeScreenShot;
+import manager.TestNGListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.lang.reflect.Method;
+
+@Listeners(TestNGListener.class)
 
 public class BoardTests extends TestBase{
 
@@ -25,7 +29,8 @@ public class BoardTests extends TestBase{
     public void createNewBoardPositiveTest(Method method){
         String boardTitle = RandomData.randomString(7);
         BoardDTO board = BoardDTO.builder()
-                .boardTitle("QA"+boardTitle)
+                //.boardTitle("QA"+boardTitle)
+                .boardTitle("")
                 .build();
         logger.info("start test "+method.getName() + " board title --> "+ board.getBoardTitle());
         app.getHelperBoard().createNewBoard(board);
@@ -38,7 +43,7 @@ public class BoardTests extends TestBase{
                 .boardTitle("")
                 .build();
         app.getHelperBoard().createNewBoard(board);
-        app.getHelperBoard().createScreenShot();
+        //app.getHelperBoard().createScreenShot();
         //Assert.assertTrue(app.getHelperBoard().isAttributeDisabled());
         Assert.assertTrue(app.getHelperBoard().isElementPresent_textBoardTitleRequired());
     }
