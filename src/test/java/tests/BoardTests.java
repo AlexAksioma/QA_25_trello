@@ -2,6 +2,7 @@ package tests;
 
 import dto.BoardDTO;
 import manager.RandomData;
+import manager.RetryAnalyzer;
 import manager.TakeScreenShot;
 import manager.TestNGListener;
 import org.slf4j.Logger;
@@ -29,18 +30,18 @@ public class BoardTests extends TestBase{
     public void createNewBoardPositiveTest(Method method){
         String boardTitle = RandomData.randomString(7);
         BoardDTO board = BoardDTO.builder()
-                //.boardTitle("QA"+boardTitle)
-                .boardTitle("")
+                .boardTitle("QA"+boardTitle)
+                //.boardTitle("")
                 .build();
         logger.info("start test "+method.getName() + " board title --> "+ board.getBoardTitle());
         app.getHelperBoard().createNewBoard(board);
         Assert.assertTrue(app.getHelperBoard().isTextInElementEquals_boardTitle(board.getBoardTitle()));
     }
 
-    @Test
+    @Test(retryAnalyzer = RetryAnalyzer.class)
     public void createNewBoardNegativeTest(){
         BoardDTO board = BoardDTO.builder()
-                .boardTitle("")
+                .boardTitle("111")
                 .build();
         app.getHelperBoard().createNewBoard(board);
         //app.getHelperBoard().createScreenShot();

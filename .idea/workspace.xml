@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9f12ec-8781-42be-806f-7f144269d85f" name="Changes" comment="added logger, screenshot, boarddto">
-      <change afterPath="$PROJECT_DIR$/src/main/java/manager/TestNGListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/manager/WDListener.java" afterDir="false" />
+    <list default="true" id="2b9f12ec-8781-42be-806f-7f144269d85f" name="Changes" comment="added testNg and WD listeners">
+      <change afterPath="$PROJECT_DIR$/src/main/java/manager/RetryAnalyzer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/TakeScreenShot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/TakeScreenShot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/BoardTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BoardTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +64,7 @@
     "last_opened_file_path": "C:/QA_Auto_Projects/QA_25/QA_25_trello"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.BoardTests.createNewBoardPositiveTest">
+  <component name="RunManager" selected="Gradle.BoardTests.createNewBoardNegativeTest">
     <configuration name="TakeScreenShot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="manager.TakeScreenShot" />
       <module name="QA_25_trello.main" />
@@ -179,9 +176,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BoardTests.createNewBoardNegativeTest" />
         <item itemvalue="Gradle.BoardTests.createNewBoardPositiveTest" />
         <item itemvalue="Gradle.BoardTests.deleteBoardPositiveTest" />
-        <item itemvalue="Gradle.BoardTests.createNewBoardNegativeTest" />
         <item itemvalue="Application.TakeScreenShot" />
         <item itemvalue="Gradle.BoardTests" />
       </list>
@@ -252,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717008211925</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added testNg and WD listeners">
+      <option name="closed" value="true" />
+      <created>1717352373064</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717352373064</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -262,6 +267,7 @@
     <MESSAGE value="added board tests, start delete test" />
     <MESSAGE value="added delete BoardTests" />
     <MESSAGE value="added logger, screenshot, boarddto" />
-    <option name="LAST_COMMIT_MESSAGE" value="added logger, screenshot, boarddto" />
+    <MESSAGE value="added testNg and WD listeners" />
+    <option name="LAST_COMMIT_MESSAGE" value="added testNg and WD listeners" />
   </component>
 </project>
