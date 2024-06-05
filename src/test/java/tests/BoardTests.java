@@ -17,31 +17,31 @@ import java.lang.reflect.Method;
 
 @Listeners(TestNGListener.class)
 
-public class BoardTests extends TestBase{
+public class BoardTests extends TestBase {
 
     Logger logger = LoggerFactory.getLogger(BoardTests.class);
 
     @BeforeClass
-    public void login(){
+    public void login() {
         app.getHelperUser().login(user);
     }
 
     @Test
-    public void createNewBoardPositiveTest(Method method){
+    public void createNewBoardPositiveTest(Method method) {
         String boardTitle = RandomData.randomString(7);
         BoardDTO board = BoardDTO.builder()
-                .boardTitle("QA"+boardTitle)
+                .boardTitle("QA" + boardTitle)
                 //.boardTitle("")
                 .build();
-        logger.info("start test "+method.getName() + " board title --> "+ board.getBoardTitle());
+        logger.info("start test " + method.getName() + " board title --> " + board.getBoardTitle());
         app.getHelperBoard().createNewBoard(board);
         Assert.assertTrue(app.getHelperBoard().isTextInElementEquals_boardTitle(board.getBoardTitle()));
     }
 
     @Test(retryAnalyzer = RetryAnalyzer.class)
-    public void createNewBoardNegativeTest(){
+    public void createNewBoardNegativeTest() {
         BoardDTO board = BoardDTO.builder()
-                .boardTitle("111")
+                .boardTitle("")
                 .build();
         app.getHelperBoard().createNewBoard(board);
         //app.getHelperBoard().createScreenShot();
@@ -50,19 +50,19 @@ public class BoardTests extends TestBase{
     }
 
     @Test
-    public void deleteBoardPositiveTest(Method method){
+    public void deleteBoardPositiveTest(Method method) {
         String boardTitle = RandomData.randomString(7);
         BoardDTO board = BoardDTO.builder()
-                .boardTitle("DEL"+boardTitle)
+                .boardTitle("DEL" + boardTitle)
                 .build();
         app.getHelperBoard().createNewBoard(board);
-        if(app.getHelperBoard().isTextInElementEquals_boardTitle(board.getBoardTitle())){
-            logger.info("start test "+method.getName() + " board title --> "+ board.getBoardTitle());
+        if (app.getHelperBoard().isTextInElementEquals_boardTitle(board.getBoardTitle())) {
+            logger.info("start test " + method.getName() + " board title --> " + board.getBoardTitle());
             app.getHelperBoard().deleteBoard();
             Assert.assertTrue(app.getHelperBoard().isTextInElementPresent_BoardDeleted());
-        }else{
+        } else {
             System.out.println("board didn't create");
-            logger.info("in test "+method.getName()+" board didn't create");
+            logger.info("in test " + method.getName() + " board didn't create");
             Assert.fail("board didn't create");
         }
     }
