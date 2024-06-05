@@ -17,6 +17,7 @@ out/
 !**/src/test/**/out/
 src/test_logs/
 src/test/resources/serialize/
+src/test/resources/photos/
 
 ### Eclipse ###
 .apt_generated

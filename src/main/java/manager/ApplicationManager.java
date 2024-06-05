@@ -20,6 +20,7 @@ public class ApplicationManager {
     public Logger logger = LoggerFactory.getLogger(ApplicationManager.class);
     private HelperUser helperUser;
     private HelperBoard helperBoard;
+    private HelperProfile helperProfile;
 
 
     public void init() {
@@ -34,6 +35,7 @@ public class ApplicationManager {
         logger.info("start testing --- navigate to --> https://trello.com/");
         helperUser = new HelperUser(driver);
         helperBoard = new HelperBoard(driver);
+        helperProfile = new HelperProfile(driver);
         driver.register(new WDListener());
     }
 
@@ -49,6 +51,9 @@ public class ApplicationManager {
 
     public HelperBoard getHelperBoard() {
         return helperBoard;
+    }
+    public HelperProfile getHelperProfile(){
+        return helperProfile;
     }
 
 

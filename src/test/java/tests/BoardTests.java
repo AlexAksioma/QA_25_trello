@@ -21,10 +21,10 @@ public class BoardTests extends TestBase {
 
     Logger logger = LoggerFactory.getLogger(BoardTests.class);
 
-    @BeforeClass
-    public void login() {
-        app.getHelperUser().login(user);
-    }
+//    @BeforeClass
+//    public void login() {
+//        app.getHelperUser().login(user);
+//    }
 
     @Test
     public void createNewBoardPositiveTest(Method method) {
@@ -49,7 +49,7 @@ public class BoardTests extends TestBase {
         Assert.assertTrue(app.getHelperBoard().isElementPresent_textBoardTitleRequired());
     }
 
-    @Test
+    @Test(retryAnalyzer = RetryAnalyzer.class)
     public void deleteBoardPositiveTest(Method method) {
         String boardTitle = RandomData.randomString(7);
         BoardDTO board = BoardDTO.builder()
