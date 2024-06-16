@@ -12,7 +12,7 @@ public class TestBase {
     public Logger logger = LoggerFactory.getLogger(TestBase.class);
     UserDTO user = new UserDTO("aksiomamedved@gmail.com", "AlexMed123!");
 
-    @BeforeSuite
+    @BeforeSuite(alwaysRun = true)
     public void setUp() {
         app.init();
         logger.info("login with email --> " + user.getEmail() + " password --> " + user.getPassword());
@@ -20,7 +20,7 @@ public class TestBase {
 
     }
 
-    @AfterSuite
+    @AfterSuite(alwaysRun = true)
     public void tearDown() {
         app.stop();
     }

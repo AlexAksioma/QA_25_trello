@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9f12ec-8781-42be-806f-7f144269d85f" name="Changes" comment="created HelperProfile, ProfileTests">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dataproviders/DataProviderBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/files_csv/boards.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="2b9f12ec-8781-42be-806f-7f144269d85f" name="Changes" comment="created dataProvider, profile test">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/bash_command.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/boardtests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/Path.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BoardTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BoardTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,11 +65,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/QA_Auto_Projects/QA_25/QA_25_trello"
+    "last_opened_file_path": "C:/QA_Auto_Projects/QA_25/QA_25_trello/src/test/resources/files_csv"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\QA_Auto_Projects\QA_25\QA_25_trello\src\test\resources\files_csv" />
       <recent name="C:\QA_Auto_Projects\QA_25\QA_25_trello\src\test\resources\photos" />
     </key>
   </component>
@@ -292,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717613055758</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="created dataProvider, profile test">
+      <option name="closed" value="true" />
+      <created>1717959163657</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717959163657</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -309,6 +316,7 @@
     <MESSAGE value="added RetryAnalyzer" />
     <MESSAGE value="added serializable BoardDTO" />
     <MESSAGE value="created HelperProfile, ProfileTests" />
-    <option name="LAST_COMMIT_MESSAGE" value="created HelperProfile, ProfileTests" />
+    <MESSAGE value="created dataProvider, profile test" />
+    <option name="LAST_COMMIT_MESSAGE" value="created dataProvider, profile test" />
   </component>
 </project>

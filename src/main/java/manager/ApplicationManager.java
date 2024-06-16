@@ -3,6 +3,9 @@ package manager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,12 +25,28 @@ public class ApplicationManager {
     private HelperBoard helperBoard;
     private HelperProfile helperProfile;
 
+    static String browser;
+
+    public ApplicationManager(){
+        browser = System.getProperty("browser", BrowserType.CHROME);
+    }
+
 
     public void init() {
-        options = new ChromeOptions();
-        options.addArguments("--lang=en");
+//        options = new ChromeOptions();
+//        options.addArguments("--lang=en");
+//        driver = new EventFiringWebDriver(new ChromeDriver(options));
+        if(browser.equals(BrowserType.FIREFOX)){
+            FirefoxOptions options1 = new FirefoxOptions();
+            options1.addPreference("intl.accept_languages","en");
+            driver = new EventFiringWebDriver(new FirefoxDriver(options1));
+            logger.info("testing on FIREFOX");
+        }else {
+            options = new ChromeOptions();
+            options.addArguments("--lang=en");
+            driver = new EventFiringWebDriver(new ChromeDriver(options));
+        }
 
-        driver = new EventFiringWebDriver(new ChromeDriver(options));
         driver.navigate().to("https://trello.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
