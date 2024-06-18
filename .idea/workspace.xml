@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9f12ec-8781-42be-806f-7f144269d85f" name="Changes" comment="created dataProvider, profile test">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/bash_command.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/boardtests.xml" afterDir="false" />
+    <list default="true" id="2b9f12ec-8781-42be-806f-7f144269d85f" name="Changes" comment="created task and xml">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/manager/PropertiesReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/smoke_tetst.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/Path.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BoardTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BoardTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProfileTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProfileTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,28 +71,43 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/QA_Auto_Projects/QA_25/QA_25_trello/src/test/resources/files_csv"
+    "last_opened_file_path": "C:/QA_Auto_Projects/QA_25/QA_25_trello/src/test/resources"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\QA_Auto_Projects\QA_25\QA_25_trello\src\test\resources" />
       <recent name="C:\QA_Auto_Projects\QA_25\QA_25_trello\src\test\resources\files_csv" />
       <recent name="C:\QA_Auto_Projects\QA_25\QA_25_trello\src\test\resources\photos" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\QA_Auto_Projects\QA_25\QA_25_trello\src\test\resources\properties" />
+    </key>
   </component>
-  <component name="RunManager" selected="Gradle.ProfileTests.changeProfileAvatarPositiveTest">
-    <configuration name="BoardDTO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dto.BoardDTO" />
-      <module name="QA_25_trello.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dto.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Gradle.BoardTests.deleteBoardPositiveTest">
+    <configuration name="BoardTests.createNewBoardPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.BoardTests.createNewBoardPositiveTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="BoardTests.deleteBoardPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -186,11 +207,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BoardTests.deleteBoardPositiveTest" />
+        <item itemvalue="Gradle.BoardTests.createNewBoardPositiveTest" />
         <item itemvalue="Gradle.ProfileTests.changeProfileAvatarPositiveTest" />
         <item itemvalue="Gradle.LoginTests.loginPositiveTest" />
-        <item itemvalue="Gradle.BoardTests.deleteBoardPositiveTest" />
         <item itemvalue="Gradle.ProfileTests.changeProfilePositiveTest" />
-        <item itemvalue="Application.BoardDTO" />
       </list>
     </recent_temporary>
   </component>
@@ -299,7 +320,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717959163657</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="created task and xml">
+      <option name="closed" value="true" />
+      <created>1718564571142</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1718564571142</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -317,6 +346,7 @@
     <MESSAGE value="added serializable BoardDTO" />
     <MESSAGE value="created HelperProfile, ProfileTests" />
     <MESSAGE value="created dataProvider, profile test" />
-    <option name="LAST_COMMIT_MESSAGE" value="created dataProvider, profile test" />
+    <MESSAGE value="created task and xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="created task and xml" />
   </component>
 </project>

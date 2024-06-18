@@ -27,7 +27,7 @@ public class BoardTests extends TestBase {
 //        app.getHelperUser().login(user);
 //    }
 
-    @Test
+    @Test(groups = {"smoke","boards"})
     public void createNewBoardPositiveTest(Method method) {
         String boardTitle = RandomData.randomString(7);
         BoardDTO board = BoardDTO.builder()

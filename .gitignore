@@ -19,6 +19,7 @@ src/test_logs/
 src/test/resources/serialize/
 src/test/resources/photos/
 src/test/resources/files_csv/
+*.properties
 
 ### Eclipse ###
 .apt_generated

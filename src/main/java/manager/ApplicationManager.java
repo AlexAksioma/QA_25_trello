@@ -26,8 +26,9 @@ public class ApplicationManager {
     private HelperProfile helperProfile;
 
     static String browser;
+    static String url;
 
-    public ApplicationManager(){
+    public ApplicationManager() {
         browser = System.getProperty("browser", BrowserType.CHROME);
     }
 
@@ -36,22 +37,24 @@ public class ApplicationManager {
 //        options = new ChromeOptions();
 //        options.addArguments("--lang=en");
 //        driver = new EventFiringWebDriver(new ChromeDriver(options));
-        if(browser.equals(BrowserType.FIREFOX)){
+        if (browser.equals(BrowserType.FIREFOX)) {
             FirefoxOptions options1 = new FirefoxOptions();
-            options1.addPreference("intl.accept_languages","en");
+            options1.addPreference("intl.accept_languages", "en");
             driver = new EventFiringWebDriver(new FirefoxDriver(options1));
             logger.info("testing on FIREFOX");
-        }else {
+        } else {
             options = new ChromeOptions();
             options.addArguments("--lang=en");
             driver = new EventFiringWebDriver(new ChromeDriver(options));
         }
 
-        driver.navigate().to("https://trello.com/");
+        //driver.navigate().to("https://trello.com/");
+        url = PropertiesReader.getProperty("login.properties", "url");
+        driver.navigate().to(url);
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        logger.info("start testing --- navigate to --> https://trello.com/");
+        logger.info("start testing --- navigate to --> " + url);
         helperUser = new HelperUser(driver);
         helperBoard = new HelperBoard(driver);
         helperProfile = new HelperProfile(driver);
@@ -71,7 +74,8 @@ public class ApplicationManager {
     public HelperBoard getHelperBoard() {
         return helperBoard;
     }
-    public HelperProfile getHelperProfile(){
+
+    public HelperProfile getHelperProfile() {
         return helperProfile;
     }
 

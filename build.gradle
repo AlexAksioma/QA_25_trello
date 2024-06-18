@@ -33,3 +33,11 @@ task boardtests(type: Test){
         suites 'src/test/resources/boardtests.xml'
     }
 }
+task smoke_tests(type: Test){
+    useTestNG(){
+        if(project.hasProperty('browser')){
+            systemProperty 'browser', "${browser}"
+        }
+        suites 'src/test/resources/smoke_tetst.xml'
+    }
+}
