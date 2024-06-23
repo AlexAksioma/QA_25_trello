@@ -24,7 +24,7 @@ public class HelperUser extends HelperBase{
         typeBase(inputPassword, user.getPassword());
         clickBase(btnLoginSubmit);
         //===============================
-        clickBase(btnWOTwoStepVerification);
+        //clickBase(btnWOTwoStepVerification);
 
     }
 

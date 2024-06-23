@@ -20,6 +20,7 @@ public class TestBase {
         app.init();
         logger.info("login with email --> " + user.getEmail() + " password --> " + user.getPassword());
         app.getHelperUser().login(user);
+        app.getHelperUser().clickBtnAcceptCookies();
 
     }
 
